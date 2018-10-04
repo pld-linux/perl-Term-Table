@@ -6,15 +6,16 @@
 %define	pnam	Table
 %include	/usr/lib/rpm/macros.perl
 Summary:	Term::Table - Format a header and rows into a table
+Summary(pl.UTF-8):	Term::Table - formatowanie nagłówka i wierszy w tabelę
 Name:		perl-Term-Table
 Version:	0.012
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Term/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	a38cad6182e2c4864752746f1035abbd
-URL:		http://search.cpan.org/dist/Term-Table/
+URL:		https://metacpan.org/release/Term-Table
 BuildRequires:	perl-devel
 BuildRequires:	rpm-perlprov
 %if %{with tests}
@@ -26,7 +27,13 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Format a header and rows into a table. This is used by some failing
 tests to provide diagnostics about what has gone wrong. This module is
-able to generic format rows of data into tables
+able to generic format rows of data into tables.
+
+%description -l pl.UTF-8
+Formatowanie nagłówka i wierszy w tabelę. Jest to używane przez
+niektóre testy do dostarczenia informacji diagnostycznych, co poszło
+nie tak w przypadku niepowodzenia. Ten moduł potrafi ogólnie
+formatować wiersze danych w tabele.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
