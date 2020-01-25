@@ -4,7 +4,6 @@
 
 %define	pdir	Term
 %define	pnam	Table
-%include	/usr/lib/rpm/macros.perl
 Summary:	Term::Table - Format a header and rows into a table
 Summary(pl.UTF-8):	Term::Table - formatowanie nagłówka i wierszy w tabelę
 Name:		perl-Term-Table
