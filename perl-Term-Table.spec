@@ -7,19 +7,23 @@
 Summary:	Term::Table - Format a header and rows into a table
 Summary(pl.UTF-8):	Term::Table - formatowanie nagłówka i wierszy w tabelę
 Name:		perl-Term-Table
-Version:	0.012
+Version:	0.015
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Term/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	a38cad6182e2c4864752746f1035abbd
+# Source0-md5:	f23274aec9bc43fe46135d37ae1b5927
 URL:		https://metacpan.org/release/Term-Table
-BuildRequires:	perl-devel
+BuildRequires:	perl-devel >= 1:5.8.1
 BuildRequires:	rpm-perlprov
+BuildRequires:	rpmbuild(macros) >= 1.745
 %if %{with tests}
-BuildRequires:  perl-Test-Simple >= 1.302097
+BuildRequires:	perl-Importer >= 0.024
+BuildRequires:	perl-Scalar-List-Utils
+BuildRequires:	perl-Test-Simple >= 1.302097
 %endif
+Requires:	perl-Importer >= 0.024
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
